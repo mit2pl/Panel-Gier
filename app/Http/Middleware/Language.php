@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class Language
 {
@@ -18,28 +20,22 @@ class Language
     public function handle(Request $request, Closure $next)
     {
         if(request('changelanguage')) {
-            if(file_exist(public_path('resources/lang'. request('changelanguage')))) {
-            if(Storage::disk('language')->exists(request("changelanguage"))){
-                alert("udalo sie");
-            }
-                // if(Auth::check()) {
-                //     $userid = Auth::id();
-                //     $sendupgradelanguage = DB::select('users')->where('id', $userid)->update('language', request('changelanguage'));
-                // }
-                // session()->put('language', request('changelanguage'));
-            }
-        }elseif(Auth::check()) {
-
+                if(Auth::check()) {
+                    $userid = Auth::id();
+                    $sendupgradelanguage = DB::select('users')->where('id', $userid)->update('language', request('changelanguage'));
+                }
+                session()->put('language', request('changelanguage'));
+                $language = request('changelanguage');
         }
-        elseif(session('language'))
-        {
+        elseif(Auth::check()) {
+            $language = Auth::user()->language;
+        }
+        elseif(session('language')) {
             $language = session('language');
-        }
-        elseif(config('app.locale')) {
+        }else {
             $language = config('app.locale');
         }
-        if(isset($language) && config('app.language' .$language))
-        {
+        if(isset($language) && $language !== config('app.locale')) {
             app()->setLocale($language);
         }
         return $next($request);

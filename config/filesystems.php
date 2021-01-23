@@ -51,6 +51,7 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
+        
         'language' => [
             'driver' => 'local',
             'root' => storage_path('lang'),
