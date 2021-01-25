@@ -26,6 +26,7 @@ class Language
                 }
                 session()->put('language', request('changelanguage'));
                 $language = request('changelanguage');
+                $request->languagewaschange = "tak";
         }
         elseif(Auth::check()) {
             $language = Auth::user()->language;
@@ -34,6 +35,7 @@ class Language
             $language = session('language');
         }else {
             $language = config('app.locale');
+            session()->put('language', config('app.locale'));
         }
         if(isset($language) && $language !== config('app.locale')) {
             app()->setLocale($language);
