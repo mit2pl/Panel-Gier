@@ -192,5 +192,10 @@
     "passwordrepeadname": "Repeat password",
     "registername": "Register",
     "Already have an account": "Already have an account?",
-    "Sign in": "Sign in"
+    "Sign in": "Sign in",
+    "Home Page": "Home Page",
+    "Your Servers": "Your Servers",
+    "Wallet": "Wallet",
+    "Settings": "Settings",
+    "Admin Panel": "Admin Panel"
 }

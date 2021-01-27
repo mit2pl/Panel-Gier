@@ -186,5 +186,10 @@
     "passwordrepeadname": "Powtórz hasło",
     "registername": "Rejestracja",
     "Already have an account": "Posiadasz już konto?",
-    "Sign in": "Zaloguj się"
+    "Sign in": "Zaloguj się",
+    "Home Page": "Strona Główna",
+    "Your Servers": "Twoje Serwery",
+    "Wallet": "Portfel",
+    "Settings": "Ustawienia",
+    "Admin Panel": "Panel Admina"
 }

@@ -21,6 +21,7 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/panel', [App\Http\Controllers\PanelConstroller::class, 'mainpage'])->name('panel')->middleware('auth');
 
 Auth::routes();
 
