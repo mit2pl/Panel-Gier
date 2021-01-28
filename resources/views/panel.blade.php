@@ -61,6 +61,15 @@
     </div>
 </div>
 <div id="restofsite">
-    <header id="headerpanel"></header>
+    <header id="headerpanel">
+        <div id="rightheadermenupanel">
+            <label>
+                20 zł
+            </label>
+            <label>
+                Witaj @empty(Auth::user()->name) {{ Auth::user()->login }} @else {{ Auth::user()->name }} @endempty
+            </label>
+        </div>
+    </header>
 </div>
 @endsection

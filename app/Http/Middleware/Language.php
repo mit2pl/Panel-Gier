@@ -22,7 +22,7 @@ class Language
         if(request('changelanguage')) {
                 if(Auth::check()) {
                     $userid = Auth::id();
-                    $sendupgradelanguage = DB::select('users')->where('id', $userid)->update('language', request('changelanguage'));
+                    $sendupgradelanguage = DB::table('users')->where('id', $userid)->update(['language' => request('changelanguage')]);
                 }
                 session()->put('language', request('changelanguage'));
                 $language = request('changelanguage');

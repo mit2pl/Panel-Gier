@@ -208,7 +208,7 @@ margin-top: 20px;
   /* left: 300px; */
   left: 300px;
   width: 100%;
-  height: 90px;
+  height: 60px;
   box-shadow: 10px 2px 8px rgba(78, 78, 78, 0.12), 10px 2px 8px rgba(78, 78, 78, 0.12);
 }
 #logopanel {
@@ -235,4 +235,14 @@ margin-top: 20px;
   text-decoration: none;
   color: #c3c3c3;
   font-weight: 600;
+}
+#rightheadermenupanel {
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+#rightheadermenupanel label {
+  padding-right: 20px;
+  padding-top: 15px;
+  color: #c3c3c3;
 }
