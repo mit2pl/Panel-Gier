@@ -191,5 +191,10 @@
     "Your Servers": "Twoje Serwery",
     "Wallet": "Portfel",
     "Settings": "Ustawienia",
-    "Admin Panel": "Panel Admina"
+    "Admin Panel": "Panel Admina",
+    "Paypal Payment": "Przelew PayPal",
+    "Bitcoin Payment": "Przelew Bitcoin",
+    "Traditional transfer": "Przelew Tradycyjny",
+    "Share Account": "Udostęnienia Konta",
+    "Payment history": "Historia Płatności"
 }

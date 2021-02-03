@@ -33,6 +33,9 @@ class Language
         }
         elseif(session('language')) {
             $language = session('language');
+            if(config('app.locale') !== session('language')) {
+                session()->put('language', $language);
+            }
         }else {
             $language = config('app.locale');
             session()->put('language', config('app.locale'));

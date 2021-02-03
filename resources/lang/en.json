@@ -197,5 +197,10 @@
     "Your Servers": "Your Servers",
     "Wallet": "Wallet",
     "Settings": "Settings",
-    "Admin Panel": "Admin Panel"
+    "Admin Panel": "Admin Panel",
+    "Paypal Payment": "Paypal Payment",
+    "Bitcoin Payment": "Bitcoin Payment",
+    "Traditional transfer": "Traditional transfer",
+    "Share Account": "Account Share",
+    "Payment history": "Payment history"
 }

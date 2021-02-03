@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -232,5 +233,15 @@ return [
     'language' => [
         'en' => 'English',
         'pl' => 'Polski',
+    ],
+
+    /*
+        in this section you can chose money payment
+    */
+
+    'money' => [
+       'Polski Złoty' => 'PLN',
+       'Euro' => 'EUR',
+       'Dolar Amerykański' => 'USD',
     ],
 ];

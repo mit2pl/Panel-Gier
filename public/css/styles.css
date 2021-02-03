@@ -246,3 +246,87 @@ margin-top: 20px;
   padding-top: 15px;
   color: #c3c3c3;
 }
+#restpanelshow {
+  position: fixed;
+  left: 300px;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+}
+#wallettwo {
+  width: 100%;
+  margin: 0;
+}
+#leftwallet {
+  width: 50%;
+  height: 10px;
+  background-color: green;
+  display: inline-block;
+}
+#rightwallet {
+  width: 50%;
+  background-color: red;
+  height: 10px;
+  display: inline-block;
+}
+#positionrelative {
+  padding-left: 50px;
+  padding-right: 50px;
+  flex: 1;
+  display: flex;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+#positionrigtsidepanel {
+  width: calc(100% - 304px);
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  transition: all 0.3s ease 0s;
+  flex-direction: column;
+  margin-left: 304px;
+}
+#restofrightpanel {
+  flex: 1;
+  display: flex;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.colposition {
+  background-color: #1b1b1b;
+  border-radius: 5px;
+  margin: 20px;
+  color: white;
+}
+#walleticon {
+  color: white;
+  font-size: 100px;
+  /* font-weight: 900; */
+  opacity: 0.8;
+  padding: 10px;
+  float: left;
+}
+#possitionwallettext {
+  text-decoration: none;
+  color: white;
+  padding-left: 100px;
+  padding-top: 32px;
+  padding-right: 10px;
+  font-size: 35px;
+  width: 100%;
+  font-weight: bold;
+}
+.inscription {
+  text-align: center;
+}
+.alinkhover:hover {
+  text-decoration: none;
+  color: #c3c3c3;
+  font-weight: 600;
+}
+.row > div[class*="col-"]
+	{
+		padding: 0px 15px;
+	}
