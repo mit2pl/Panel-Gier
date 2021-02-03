@@ -29,3 +29,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::get('/wallet', [App\Http\Controllers\WalletController::class, 'showwallet'])->name('wallet')->middleware('auth');
+Route::get('/wallet/history', [App\Http\Controllers\WalletController::class, 'showwallethistory'])->name('showwallethistory')->middleware('auth');

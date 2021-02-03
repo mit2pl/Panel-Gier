@@ -22,4 +22,7 @@ class WalletController extends Controller
         //auth()->user()->assignRole('admin');
         return view('wallet');       
     }
+    public function showwallethistory() {
+        return view('wallethistory'); 
+    }
 }

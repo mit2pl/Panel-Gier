@@ -52,7 +52,7 @@
         </a>
     </div>
     <div class="col-md-6 colposition">
-        <a href="#" class="stretched-link alinkhover">
+        <a href="{{ route('showwallethistory') }}" class="stretched-link alinkhover">
             <label style="display:block;">
             <i class="fas fa-history" id="walleticon"></i>
             <div id="possitionwallettext">
