@@ -193,8 +193,9 @@ margin-top: 20px;
     color: #c5c5c5;
 }
 #leftnav {
+  position: fixed;
   background-color: #3e3d3d;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 300px;
@@ -330,3 +331,22 @@ margin-top: 20px;
 	{
 		padding: 0px 15px;
 	}
+#tableforeach {
+  margin-top: 10px;
+  margin: 0 auto;
+  width: 80%;
+}
+#tableforeach th {
+  background-color: #151515cf;
+  color: rgba(255, 255, 255, 0.87);
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#tableforeach tr {
+    border-bottom: 1px solid #525252;
+}
+#tableforeach td {
+  background-color: #6b6b6b;
+  color: rgba(255, 255, 255, 0.87);
+}

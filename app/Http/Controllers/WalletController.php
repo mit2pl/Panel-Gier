@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\User;
+use App\Models\wallethistory;
 
 class WalletController extends Controller
 {
@@ -23,6 +25,11 @@ class WalletController extends Controller
         return view('wallet');       
     }
     public function showwallethistory() {
-        return view('wallethistory'); 
+        $iduser = Auth::id();
+        $getwallethistory = wallethistory::all();
+        //= DB::select("SELECT * FROM wallet_history WHERE iduser='$iduser'");
+        // $getwallethistory
+        return $getwallethistory;
+        //return view('wallethistory', ['getwallethistory' => $getwallethistory]); 
     }
 }
