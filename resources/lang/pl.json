@@ -196,5 +196,8 @@
     "Bitcoin Payment": "Przelew Bitcoin",
     "Traditional transfer": "Przelew Tradycyjny",
     "Share Account": "Udostęnienia Konta",
-    "Payment history": "Historia Płatności"
+    "Payment history": "Historia Płatności",
+    "Typ Transaction": "Typ transakcji",
+    "Amount": "Kwota",
+    "Transaction Date": "Data Tranzakcji"
 }

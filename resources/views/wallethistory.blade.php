@@ -1,19 +1,19 @@
 @extends('showpanel')
 @section('title', __('Wallet'))
 @section('body')
-<div style="margin-top:10px; width: 80%; margin:0 auto;">
+<div style="margin-top:10px; width: 90%; margin:0 auto;">
     {{-- <table id="tableforeach"> --}}
     <table class="table table-striped table-dark">
         <tr>
-            <th id=borderright>Typ Tranzakcji</th>
-            <th>Kwota</th>
-            <th>Data</th>
+            <th id=borderright>{{ __ ('Typ Transaction')}}</th>
+            <th>{{ __('Amount')}}</th>
+            <th>{{ __('Transaction Date')}}</th>
         </tr>
-        @forelse ($getwallethistory as $getwallethistory)
+        @forelse ($getwallethistory as $getwallethistorya)
             <tr>
-                <td>{{ $getwallethistory->howmuch }}</td>
-                <td></td>
-                <td></td>
+                <td>{{ $getwallethistorya->howmuch }}</td>
+                <td>{{ $getwallethistorya->howmuch }}</td>
+                <td>{{ $getwallethistorya->created_at }}</td>
             </tr>
         @empty
         <tr>
@@ -21,6 +21,6 @@
         </tr>
         @endforelse
     </table>
-    <div class="d-flex justify-content-center">{!! $getwallethistory->onEachSide(5)->links() !!}</div>
+    <div>{{ $getwallethistory->links()}}</div>
 </div>
 @endsection

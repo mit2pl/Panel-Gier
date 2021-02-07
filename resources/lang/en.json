@@ -202,5 +202,8 @@
     "Bitcoin Payment": "Bitcoin Payment",
     "Traditional transfer": "Traditional transfer",
     "Share Account": "Account Share",
-    "Payment history": "Payment history"
+    "Payment history": "Payment history",
+    "Typ Transaction": "Typ Transaction",
+    "Amount": "Amount",
+    "Transaction Date": "Transaction Date"
 }

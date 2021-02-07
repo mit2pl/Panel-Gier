@@ -244,4 +244,9 @@ return [
        'Euro' => 'EUR',
        'Dolar Amerykański' => 'USD',
     ],
+    'moneyselect' => [
+        'PLN' => 'zł',
+        'EUR' => 'Є',
+        'USD' => '$',
+    ],
 ];
