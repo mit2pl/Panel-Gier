@@ -21,6 +21,7 @@ class CreateWalletHistory extends Migration
             $table->text('howmuch');
             $table->text('formofpayment');
             $table->text('typetransaction');
+            $table->text('idserverpayment');
             $table->timestamps();
         });
     }
@@ -38,7 +39,9 @@ class CreateWalletHistory extends Migration
 
 /**
  * iduser - id uzytkownika
- * typepayment - typ tranzakcji 1 - jezeli paypal, 2-sms itp
+ * typpayment - typ tranzakcji 1 - jezeli paypal, 2-sms, 3-oplacenie serwera, 4-tranzakcja bitcoin, 5-przelew tradycjyjny
  * howmuch - ile kasy
+ * formofpayment -jaka waluta PLN-zł, EUR- Є, usd -$,
  * typetransaction - 1-wplata, 2-oplacenie serwera, 3- wzrot kasy
+ * idserverpayment - numer serwera do oplacenia
  */

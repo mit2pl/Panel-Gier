@@ -25,7 +25,6 @@ class WalletController extends Controller
         return view('wallet');       
     }
     public function showwallethistory() {
-        $iduser = Auth::id();
         $getwallethistory = wallethistory::where('iduser', Auth::id())->paginate(10);
         //= DB::select("SELECT * FROM wallet_history WHERE iduser='$iduser'");
         // return $getwallethistory;

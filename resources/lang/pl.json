@@ -199,5 +199,10 @@
     "Payment history": "Historia Płatności",
     "Typ Transaction": "Typ transakcji",
     "Amount": "Kwota",
-    "Transaction Date": "Data Tranzakcji"
+    "Transaction Date": "Data Tranzakcji",
+    "Paypal Transaction": "Wpłata pieniędzy za pośrednictwem paypal",
+    "Sms Transaction": "Wpłata pieniędzy za pośrednictwem smsa",
+    "Server Payment Transaction" : "Opłacenie serwera o numerze:",
+    "bitcoin Transaction": "Wpłata pieniędzy za pośrednictwem bitcoina",
+    "Traditional Transaction" : "Wpłata pieniędzy za pośrednictwem przelewu tradycyjnego"
 }

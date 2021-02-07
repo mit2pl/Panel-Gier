@@ -15,6 +15,8 @@ class wallethistory extends Model
         'typpayment',
         'howmuch',
         'formofpayment',
+        'typetransaction',
+        'idserverpayment',
     ];
     protected $hidden = [
         'updated_at',
