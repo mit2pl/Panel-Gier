@@ -19,6 +19,7 @@ class CreateWalletHistory extends Migration
             $table->text('iduser');
             $table->text('typpayment');
             $table->text('howmuch');
+            $table->text('formofpayment');
             $table->text('typetransaction');
             $table->timestamps();
         });
