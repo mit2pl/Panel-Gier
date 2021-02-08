@@ -25,9 +25,12 @@ class WalletController extends Controller
         return view('wallet');       
     }
     public function showwallethistory() {
-        $getwallethistory = wallethistory::where('iduser', Auth::id())->paginate(10);
+        $getwallethistory = wallethistory::where('iduser', Auth::id())->orderBy('created_at', 'desc')->paginate(10);
         //= DB::select("SELECT * FROM wallet_history WHERE iduser='$iduser'");
         // return $getwallethistory;
         return view('wallethistory', compact('getwallethistory')); 
+    }
+    public function showwalletpaypal() {
+        return view('walletpaypal');
     }
 }

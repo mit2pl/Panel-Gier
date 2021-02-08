@@ -205,5 +205,11 @@
     "Payment history": "Payment history",
     "Typ Transaction": "Typ Transaction",
     "Amount": "Amount",
-    "Transaction Date": "Transaction Date"
+    "Transaction Date": "Transaction Date",
+    "Paypal Transaction": "Money deposit through paypal",
+    "Sms Transaction": "Money deposit through sms",
+    "Server Payment Transaction" : "Charge  server of number:",
+    "bitcoin Transaction": "Money deposit through bitcoin",
+    "Traditional Transaction" : "Money deposit through traditional transfer",
+    "No history wallet": "No history of wallet"
 }

@@ -193,7 +193,7 @@ margin-top: 20px;
     color: #c5c5c5;
 }
 #leftnav {
-  position: fixed;
+  position: absolute;
   background-color: #3e3d3d;
   /* position: absolute; */
   top: 0;
@@ -390,4 +390,21 @@ box-shadow: none;
   color: #fff;
   background-color: #3e3e3e;
   border-color: #5a5a5a;
+}
+#paypalwlletmiddle {
+margin: 0 auto;
+width: 100px;
+height: 100px;
+background-color:#4b4b4b;
+}
+@media(min-width: 760px) {
+  #leftnav {
+    position:fixed;
+ }
+
+}
+@media (max-width: 759.99px) {
+  #leftnav {
+    display: none;
+ }
 }

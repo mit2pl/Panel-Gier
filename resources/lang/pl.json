@@ -204,5 +204,6 @@
     "Sms Transaction": "Wpłata pieniędzy za pośrednictwem smsa",
     "Server Payment Transaction" : "Opłacenie serwera o numerze:",
     "bitcoin Transaction": "Wpłata pieniędzy za pośrednictwem bitcoina",
-    "Traditional Transaction" : "Wpłata pieniędzy za pośrednictwem przelewu tradycyjnego"
+    "Traditional Transaction" : "Wpłata pieniędzy za pośrednictwem przelewu tradycyjnego",
+    "No history wallet": "Brak historii portfela"
 }

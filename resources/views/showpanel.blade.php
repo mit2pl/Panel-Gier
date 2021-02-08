@@ -64,6 +64,15 @@
         <span>
             <label>
                 <a href="{{ route('panel') }}">
+                    <i class="fas fa-headset"></i>{{__ ('Share Account')}}
+                </a>
+            </label>
+        </span>
+    </div>
+    <div id="leftmenupanel">
+        <span>
+            <label>
+                <a href="{{ route('panel') }}">
                     <i class="fas fa-share-alt"></i>{{__ ('Share Account')}}
                 </a>
             </label>

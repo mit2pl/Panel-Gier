@@ -30,3 +30,4 @@ Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginFor
 Route::post('/', [App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::get('/wallet', [App\Http\Controllers\WalletController::class, 'showwallet'])->name('wallet')->middleware('auth');
 Route::get('/wallet/history', [App\Http\Controllers\WalletController::class, 'showwallethistory'])->name('showwallethistory')->middleware('auth');
+Route::get('/wallet/paypal', [App\Http\Controllers\WalletController::class, 'showwalletpaypal'])->name('showwalletpaypal')->middleware('auth');

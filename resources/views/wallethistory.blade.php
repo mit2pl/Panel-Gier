@@ -36,7 +36,7 @@
             </tr>
         @empty
         <tr>
-            <td colspan="3">Brak histori</td>
+            <td colspan="3" style="text-align:center;">{{ __('No history wallet') }}</td>
         </tr>
         @endforelse
     </table>

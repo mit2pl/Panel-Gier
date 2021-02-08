@@ -3,8 +3,9 @@
 @section('body')
 <div class="container">
   <div class="row">
+    @if(env('PAYPAL_ACTIVE') == '1')
     <div class="col-md-6 colposition">
-        <a href="#" class="stretched-link alinkhover">
+        <a href="{{ route('showwalletpaypal') }}" class="stretched-link alinkhover">
             <label style="display:block;">
             <i class="fab fa-paypal" id="walleticon"></i>
             <div id="possitionwallettext">
@@ -15,6 +16,7 @@
             </label>
         </a>
     </div>
+    @endif
     <div class="col-md-6 colposition">
         <a href="#" class="stretched-link alinkhover">
             <label style="display:block;">
