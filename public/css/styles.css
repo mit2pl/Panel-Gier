@@ -393,9 +393,7 @@ box-shadow: none;
 }
 #paypalwlletmiddle {
 margin: 0 auto;
-width: 100px;
-height: 100px;
-background-color:#4b4b4b;
+width: 90%;
 }
 @media(min-width: 760px) {
   #leftnav {
@@ -407,4 +405,16 @@ background-color:#4b4b4b;
   #leftnav {
     display: none;
  }
+}
+#paypalwallettextup {
+  color: #f2dede;
+  background-color: #7d7d7d;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: 400;
+  font-size: 21px;
+  box-shadow: -1px 0px 0px 0px #525252, 1px 0px 0px 0px #525252, 0px -2px 0px 0px #525252;
 }
