@@ -31,6 +31,13 @@ class WalletController extends Controller
         return view('wallethistory', compact('getwallethistory')); 
     }
     public function showwalletpaypal() {
-        return view('walletpaypal');
+        if(env("PAYPAL_ACTIVE") == '1')
+        {
+            return view('walletpaypal');
+        }
+        else 
+        {
+            abort(404);
+        }
     }
 }

@@ -395,15 +395,19 @@ box-shadow: none;
 margin: 0 auto;
 width: 90%;
 }
-@media(min-width: 760px) {
+@media(min-width: 900px) {
   #leftnav {
     position:fixed;
  }
 
 }
-@media (max-width: 759.99px) {
+@media (max-width: 899.99px) {
   #leftnav {
     display: none;
+ }
+ #positionrigtsidepanel {
+   width: 100%;
+   margin-left: 0;
  }
 }
 #paypalwallettextup {
@@ -417,4 +421,9 @@ width: 90%;
   font-weight: 400;
   font-size: 21px;
   box-shadow: -1px 0px 0px 0px #525252, 1px 0px 0px 0px #525252, 0px -2px 0px 0px #525252;
+}
+#paypalwalletrest {
+  width: 100%;
+  background-color: #525252;
+  color: #f2dede;
 }
