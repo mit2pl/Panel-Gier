@@ -205,5 +205,7 @@
     "Server Payment Transaction" : "Opłacenie serwera o numerze:",
     "bitcoin Transaction": "Wpłata pieniędzy za pośrednictwem bitcoina",
     "Traditional Transaction" : "Wpłata pieniędzy za pośrednictwem przelewu tradycyjnego",
-    "No history wallet": "Brak historii portfela"
+    "No history wallet": "Brak historii portfela",
+    "Type the amount": "Wpisz kwotę:",
+    "Pay for this": "Zapłać"
 }
