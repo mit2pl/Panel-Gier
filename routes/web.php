@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the RouteServiceProvider within a group whic h
 | contains the "web" middleware group. Now create something great!
 |
 */
@@ -30,4 +30,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'wallet'], function() {
         Route::post('/paypal', [App\Http\Controllers\WalletController::class, 'addmonybypaypal'])->name('addmonybypaypal');
         Route::get('/paypal/confirmed', [App\Http\Controllers\WalletController::class, 'confirmedwalletpaypal'])->name('confirmedwalletpaypal');
         Route::get('/paypal/canceled', [App\Http\Controllers\WalletController::class, 'canceledwalletpaypal'])->name('canceledwalletpaypal');
+});
+//account settings 
+Route::group(['middleware' => 'auth', 'prefix' => 'accountsetting'], function() {
+    Route::get('/', [App\Http\Controllers\AccountsettingsController::class, 'showsettings'])->name('accountsettings');
 });

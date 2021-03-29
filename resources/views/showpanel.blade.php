@@ -54,7 +54,7 @@
     <div id="leftmenupanel">
         <span>
             <label>
-                <a href="{{ route('panel') }}">
+                <a href="{{ route('accountsettings') }}">
                     <i class="fas fa-cog"></i>{{__ ('Settings')}}
                 </a>
             </label>
