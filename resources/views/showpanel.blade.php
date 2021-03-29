@@ -117,12 +117,12 @@
 <div id="positionrigtsidepanel">
     <div style="padding-top:30px;">
         @yield('body')
-    </div>
-</div>
-<footer class="sticky-footer" style="/*position: absolute;*/width: 100%;position: fixed;left: 0;bottom: 0;">
+        <footer class="sticky-footer" style="/*position: absolute;*/width: 100%;position: fixed;left: 0;bottom: 0;">
     <div class="text-center">
         <p style="color: rgb(177,182,187);">@2021 by mit2&nbsp;</p>
     </div>
 </footer>
+    </div>
+</div>
 </body>
 </html>
