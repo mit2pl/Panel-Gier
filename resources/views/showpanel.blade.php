@@ -64,7 +64,7 @@
         <span>
             <label>
                 <a href="{{ route('panel') }}">
-                    <i class="fas fa-headset"></i>{{__ ('Share Account')}}
+                    <i class="fas fa-headset"></i>{{__ ('Support')}}
                 </a>
             </label>
         </span>

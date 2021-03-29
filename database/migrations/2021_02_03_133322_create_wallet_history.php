@@ -22,6 +22,7 @@ class CreateWalletHistory extends Migration
             $table->text('formofpayment');
             $table->text('typetransaction');
             $table->text('idserverpayment');
+            $table->text('statustransaction');
             $table->timestamps();
         });
     }
@@ -44,4 +45,5 @@ class CreateWalletHistory extends Migration
  * formofpayment -jaka waluta PLN-zł, EUR- Є, usd -$,
  * typetransaction - 1-wplata, 2-oplacenie serwera, 3- wzrot kasy
  * idserverpayment - numer serwera do oplacenia
+ * statustransaction - status tranzakcji: 0-anulowane, 1- w trakcie, 2- zrealizowano
  */

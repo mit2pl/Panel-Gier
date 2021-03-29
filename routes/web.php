@@ -13,21 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
-Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/panel', [App\Http\Controllers\PanelConstroller::class, 'mainpage'])->name('panel')->middleware('auth');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [App\Http\Controllers\Auth\LoginController::class, 'login']);
-Route::get('/wallet', [App\Http\Controllers\WalletController::class, 'showwallet'])->name('wallet')->middleware('auth');
-Route::get('/wallet/history', [App\Http\Controllers\WalletController::class, 'showwallethistory'])->name('showwallethistory')->middleware('auth');
-Route::get('/wallet/paypal', [App\Http\Controllers\WalletController::class, 'showwalletpaypal'])->name('showwalletpaypal')->middleware('auth');
+//Wallet route
+Route::group(['middleware' => 'auth', 'prefix' => 'wallet'], function() {
+    Route::get('/', [App\Http\Controllers\WalletController::class, 'showwallet'])->name('wallet');
+        Route::get('/history', [App\Http\Controllers\WalletController::class, 'showwallethistory'])->name('showwallethistory');
+        Route::get('/paypal', [App\Http\Controllers\WalletController::class, 'showwalletpaypal'])->name('showwalletpaypal');
+        Route::post('/paypal', [App\Http\Controllers\WalletController::class, 'addmonybypaypal'])->name('addmonybypaypal');
+        Route::get('/paypal/confirmed', [App\Http\Controllers\WalletController::class, 'confirmedwalletpaypal'])->name('confirmedwalletpaypal');
+        Route::get('/paypal/canceled', [App\Http\Controllers\WalletController::class, 'canceledwalletpaypal'])->name('canceledwalletpaypal');
+});

@@ -163,6 +163,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+        Epmnzava\PaypalLaravel\PaypalLaravelServiceProvider::class,
+        // mit2\paysafecarde\Providers\PaysafecardProvider::class,
 
         /*
          * Package Service Providers...
@@ -228,7 +230,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        // 'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
+        'Paypal'=>Epmnzava\PaypalLaravel\PaypalLaravelFacade::class,
     ],
     'language' => [
         'en' => 'English',

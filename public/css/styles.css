@@ -431,3 +431,15 @@ width: 90%;
   padding-bottom: 20px;
   text-align: center;
 }
+.inputtexterror {
+  text-align: center;
+  color: #ff224a;
+  margin: 0;
+  font-size: 17px;
+  margin-top: 10px;
+  line-height: 1.66;
+  font-family: ui-monospace;
+}
+.inputerror {
+  box-shadow: -1px -1px 1px #ff3535, 1px 2px 2px #ff3535, 1px -1px 1px #ff3535, -1px 1px 0px #ff3535;
+}

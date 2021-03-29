@@ -207,5 +207,7 @@
     "Traditional Transaction" : "Wpłata pieniędzy za pośrednictwem przelewu tradycyjnego",
     "No history wallet": "Brak historii portfela",
     "Type the amount": "Wpisz kwotę:",
-    "Pay for this": "Zapłać"
+    "Pay for this": "Zapłać",
+    "Plecase enter amount": "Proszę wpisać kwotę",
+    "Support": "Wsparcie"
 }
