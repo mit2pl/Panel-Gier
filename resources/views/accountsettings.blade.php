@@ -7,7 +7,7 @@
         <form action="" method="POST">
             <div>
                 <label>Email:</Label>
-                <input type="text">
+                <input type="text" class="inputcolor">
             </div>
         </form>
     </div>

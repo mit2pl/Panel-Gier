@@ -464,3 +464,29 @@ width: 90%;
   border-bottom-left-radius: .25rem;
   border-bottom-right-radius: .25rem;
 }
+.insputcolor {
+  width: 100%;
+  color: red;
+  padding: .375rem .75rem;
+  font-size: .875rem;
+  font-weight: 400;
+  background-color: rgba(255,255,255,.05);
+  background-clip: padding-box;
+  border: 1px solid;
+}
+.inputcolor {
+  background-color: #504f4f;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid;
+  color: #c7c7c7;
+  border-color: #848484;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
