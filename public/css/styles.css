@@ -486,7 +486,18 @@ width: 90%;
   background-clip: padding-box;
   border: 1px solid;
   color: #c7c7c7;
-  border-color: #848484;
+  border-color: #313131;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.inputcolor:focus {
+  color: #c7c7c7;
+  background-color: #504f4f;
+  /* border-color: red; */
+  border-color: #757474;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(146 146 146 / 25%);
+}
+.labelcolor {
+  color: rgb(222 222 222 / 87%);
 }

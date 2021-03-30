@@ -6,7 +6,11 @@
     <div class="calaresztaform">
         <form action="" method="POST">
             <div>
-                <label>Email:</Label>
+                <label class="labelcolor">Email:</Label>
+                <input type="text" class="inputcolor">
+            </div>
+            <div>
+                <label class="labelcolor">Email:</Label>
                 <input type="text" class="inputcolor">
             </div>
         </form>
