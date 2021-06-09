@@ -21,14 +21,14 @@ class AccountsettingsController extends Controller
             // return redirect()->route('accountsettings');
             }else if($pobierz->accountsettingsmethod == "getpassword") {
                 if(\Hash::check($pobierz->accountsettingspasswordnow , Auth::user()->password)) {
-                    if(!\Hash::check($pobierz->accountsettingspasswordnew , Auth::user()->password) {
-                        // if($pobierz->accountsettingspasswordnew == $pobierz->accountsettingspasswordnewrepeat) {
-                        //     User::where('id', Auth::id())->update('password' => bcrypt($pobierz->accountsettingspasswordnew));
-                        //     $odpowiedz = "okhaslo";
-                        // } else {
-                        //     //nowe hasla nie sa takie same
-                        //     $odpowiedz = "nowehaslonietak";
-                        // }
+                    if(!\Hash::check($pobierz->accountsettingspasswordnew , Auth::user()->password)) {
+                        if($pobierz->accountsettingspasswordnew == $pobierz->accountsettingspasswordnewrepeat) {
+                            $puals = User::where('id', Auth::id())->update(['password' => bcrypt($pobierz->accountsettingspasswordnew)]);
+                            $odpowiedz = "okhaslo";
+                        } else {
+                            //nowe hasla nie sa takie same
+                            $odpowiedz = "nowehaslonietak";
+                        }
                     } else {
                         $odpowiedz = "nowehaslojesttakiesamojakstare";
                         //haslo jest takie samo jak stare haslo

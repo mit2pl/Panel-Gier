@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
             }, 4000);
         }});
     });
-    jQuery("#changepassword").click(function(e)) {
+    jQuery("#changepassword").click(function(e) {
         e.preventDefault();
         $.ajaxSetup({
         headers: {
@@ -64,16 +64,14 @@ jQuery(document).ready(function(){
             }, 3000);
         },
         success: function(result){
-            jQuery('.alert-success').show("slow");
+            Console.log(result);
+            {{-- jQuery('.alert-success').show("slow");
             jQuery('.alert-success').html(result.success);
             setTimeout(function(){
                 jQuery('.alert-success').hide("slow");
-            }, 3000);
-            {{-- setTimeout(function(){
-                window.location.reload(1);
-            }, 4000); --}}
+            }, 3000); --}}
         }});
-    }
+    });
 });
 </script>
 <div class="divnacalosc">
