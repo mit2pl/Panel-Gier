@@ -41,6 +41,39 @@ jQuery(document).ready(function(){
             }, 4000);
         }});
     });
+    jQuery("#changepassword").click(function(e)) {
+        e.preventDefault();
+        $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+        }
+        });
+        jQuery.ajax({
+        url: "{{ route('accountsettingsedit') }}",
+        method: 'POST',
+        data: {
+            accountsettingsmethod: 'getpassword',
+            accountsettingspasswordnow: jQuery('#accountsettingspasswordnow').val(),
+            accountsettingspasswordnew: jQuery('#accountsettingspasswordnew').val(),
+            accountsettingspasswordnewrepeat: jQuery('#accountsettingspasswordnewrepeat').val()
+        },
+        error: function(response) {
+           jQuery('.alert-danger').show("slow");
+            setTimeout(function(){
+                jQuery('.alert-danger').hide("slow");
+            }, 3000);
+        },
+        success: function(result){
+            jQuery('.alert-success').show("slow");
+            jQuery('.alert-success').html(result.success);
+            setTimeout(function(){
+                jQuery('.alert-success').hide("slow");
+            }, 3000);
+            {{-- setTimeout(function(){
+                window.location.reload(1);
+            }, 4000); --}}
+        }});
+    }
 });
 </script>
 <div class="divnacalosc">
@@ -49,7 +82,6 @@ jQuery(document).ready(function(){
     <div class="alert alert-success" style="display:none">{{ __("Setting was change") }}</div>
     <div class="alert alert-danger" style="display:none">{{ __("Setting was change") }}</div>
         <form>
-
             <div>
                 <label class="labelcolor">Imie:</Label>
                 <input type="text" class="inputcolor" id="accountsettingsname" value="{{ Auth::user()->name }}">
