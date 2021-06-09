@@ -34,4 +34,5 @@ Route::group(['middleware' => 'auth', 'prefix' => 'wallet'], function() {
 //account settings 
 Route::group(['middleware' => 'auth', 'prefix' => 'accountsetting'], function() {
     Route::get('/', [App\Http\Controllers\AccountsettingsController::class, 'showsettings'])->name('accountsettings');
+    Route::post('/', [App\Http\Controllers\AccountsettingsController::class, 'accountsettingsedit'])->name('accountsettingsedit');
 });

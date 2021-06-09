@@ -102,7 +102,25 @@
     </div>
     @endrole
 </div>
-<div id="restofsite">
+<div id="restrightside">
+    <div class="divinsiderestright">
+    <header id="headeres">
+        <div id="rightheadermenupanel">
+            <label>
+                20 zł
+            </label>
+            <label>
+                Witaj @empty(Auth::user()->name) {{ Auth::user()->login }} @else {{ Auth::user()->name }} @endempty
+            </label>
+        </div>
+    </header>
+    <div class="srodek">
+      @yield('body')
+  </div>
+  <footer class="koniecstrony" id="headeres"><p class="footerp">@2021 by mit2&nbsp;</p></footer>
+  </div>
+</div>
+{{-- <div id="restofsite">
     <header id="headerpanel">
         <div id="rightheadermenupanel">
             <label>
@@ -113,16 +131,22 @@
             </label>
         </div>
     </header>
+    <div style="padding-top:30px;">
+    @yield('body')
+    </div>
 </div>
 <div id="positionrigtsidepanel">
-    <div style="padding-top:30px;">
-        @yield('body')
-        <footer class="sticky-footer" style="/*position: absolute;*/width: 100%;position: fixed;left: 0;bottom: 0;">
+    {{-- <div style="padding-top:30px;">
+        @yield('body') --}}
+        {{-- <footer class="sticky-footer" style="margin-top: 20px;">
     <div class="text-center">
         <p style="color: rgb(177,182,187);">@2021 by mit2&nbsp;</p>
     </div>
+</footer> --}}
+{{-- <footer class="footersa">
+  Footer 
 </footer>
-    </div>
+    </div> --}}
 </div>
 </body>
 </html>

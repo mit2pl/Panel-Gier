@@ -22,7 +22,7 @@
         "paypal/paypal-checkout-sdk": "^1.0",
         "paypal/rest-api-sdk-php": "*",
         "spatie/laravel-permission": "^4.0",
-        "srmklive/paypal": "~3.0"
+        "srmklive/paypal": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

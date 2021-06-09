@@ -211,5 +211,10 @@
     "Server Payment Transaction" : "Charge  server of number:",
     "bitcoin Transaction": "Money deposit through bitcoin",
     "Traditional Transaction" : "Money deposit through traditional transfer",
-    "No history wallet": "No history of wallet"
+    "No history wallet": "No history of wallet",
+    "Type the amount": "Type amount:",
+    "Pay for this": "Pay",
+    "Plecase enter amount": "Please enter amount",
+    "Support": "Support",
+    "Setting was change": "Settings was change, In the moment website get refresh"
 }
