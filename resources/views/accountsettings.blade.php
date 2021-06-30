@@ -41,6 +41,7 @@ jQuery(document).ready(function(){
             }, 4000);
         }});
     });
+    $("#changepassword").validate();
     jQuery("#changepassword").click(function(e) {
         e.preventDefault();
         $.ajaxSetup({
@@ -64,7 +65,7 @@ jQuery(document).ready(function(){
             }, 3000);
         },
         success: function(result){
-            Console.log(result);
+            console.log(result);
             {{-- jQuery('.alert-success').show("slow");
             jQuery('.alert-success').html(result.success);
             setTimeout(function(){
@@ -82,7 +83,7 @@ jQuery(document).ready(function(){
         <form>
             <div>
                 <label class="labelcolor">Imie:</Label>
-                <input type="text" class="inputcolor" id="accountsettingsname" value="{{ Auth::user()->name }}">
+                <input type="text" class="inputcolor erroricon" id="accountsettingsname" value="{{ Auth::user()->name }}">
             </div>
             <div>
                 <label class="labelcolor">Nazwisko:</Label>
@@ -133,7 +134,7 @@ jQuery(document).ready(function(){
 <div class="divnacalosc" style="padding-top:30px;">
     <div id="fullsettings" class="naglowek">Zmiana hasła</div>
     <div class="calaresztaform">
-        <form>
+        <form method="post" action="">
             <div>
                 <label class="labelcolor">Aktualne hasło:</Label>
                 <input type="password" class="inputcolor" id="accountsettingspasswordnow" required>
@@ -147,7 +148,8 @@ jQuery(document).ready(function(){
                 <input type="password" class="inputcolor" id="accountsettingspasswordnewrepeat" required>
             </div>
             <div class="d-flex justify-content-center" style="margin-top: 20px; margin-bottom: 5px;">
-                <button id="changepassword" class="btn btn-primary">Zapisz</button>
+                <input id="changepassword" type="submit" name="fjsafew" class="btn btn-primary">
+                {{-- <button id="changepassword" class="btn btn-primary">Zapisz</button> --}}
             </div>
         </form>
     </div>
