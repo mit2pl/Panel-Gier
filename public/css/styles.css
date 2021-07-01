@@ -560,3 +560,10 @@ width: 90%;
   background-position: right calc(.375em + .1875rem) center;
   background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
+.error {
+  font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ee6060;
+    text-align: left;
+}

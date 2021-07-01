@@ -41,37 +41,62 @@ jQuery(document).ready(function(){
             }, 4000);
         }});
     });
-    $("#changepassword").validate();
-    jQuery("#changepassword").click(function(e) {
-        e.preventDefault();
-        $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-        }
-        });
-        jQuery.ajax({
-        url: "{{ route('accountsettingsedit') }}",
-        method: 'POST',
-        data: {
-            accountsettingsmethod: 'getpassword',
-            accountsettingspasswordnow: jQuery('#accountsettingspasswordnow').val(),
-            accountsettingspasswordnew: jQuery('#accountsettingspasswordnew').val(),
-            accountsettingspasswordnewrepeat: jQuery('#accountsettingspasswordnewrepeat').val()
-        },
-        error: function(response) {
-           jQuery('.alert-danger').show("slow");
-            setTimeout(function(){
-                jQuery('.alert-danger').hide("slow");
-            }, 3000);
-        },
-        success: function(result){
-            console.log(result);
-            {{-- jQuery('.alert-success').show("slow");
-            jQuery('.alert-success').html(result.success);
-            setTimeout(function(){
-                jQuery('.alert-success').hide("slow");
-            }, 3000); --}}
-        }});
+    $("#changepassword").validate({
+         ignore: ":hidden",
+         rules: {
+             accountsettingspasswordnow: {
+                 required: true,
+             },
+             accountsettingspasswordnew: {
+                 required: true,
+                 minlength: 8,
+             },
+             accountsettingspasswordnewrepeat: {
+                 required: true,
+                 minlength: 8,
+                 equalTo: "#accountsettingspasswordnew"
+             }
+         },
+         messages: {
+             accountsettingspasswordnow: "Pole musi być uzupełnione",
+             accountsettingspasswordnew: {
+                 required: "Pole musi być uzupełnione",
+                 minlength: "Pole musi zawierać conajmniej 8 znaków"
+             },
+             accountsettingspasswordnewrepeat: {
+                 required: "Pole musi być uzupełnione",
+                 minlength: "Pole musi zawierać conajmniej 8 znaków",
+                 equalTo: "Nowe hasła nie są takie same"
+             }
+         },
+         submitHandler: function(e) {
+             console.log('ajaxudany');
+            jQuery.ajax({
+                url: "{{ route('accountsettingsedit') }}",
+                method: 'POST',
+                data: {
+                    _token: $("input[name='_token']").val(),
+                    accountsettingsmethod: 'getpassword',
+                    accountsettingspasswordnow: jQuery('#accountsettingspasswordnow').val(),
+                    accountsettingspasswordnew: jQuery('#accountsettingspasswordnew').val(),
+                    accountsettingspasswordnewrepeat: jQuery('#accountsettingspasswordnewrepeat').val()
+                },
+                error: function(response) {
+                jQuery('.alert-danger').show("slow");
+                    setTimeout(function(){
+                        jQuery('.alert-danger').hide("slow");
+                    }, 3000);
+                },
+                success: function(result){
+                    console.log(result);
+                }
+            });
+            return false;
+         },
+         errorPlacement: function(eror, objekt) {
+             
+             $("#".objekt).append("testujemy");
+         }
     });
 });
 </script>
@@ -134,22 +159,22 @@ jQuery(document).ready(function(){
 <div class="divnacalosc" style="padding-top:30px;">
     <div id="fullsettings" class="naglowek">Zmiana hasła</div>
     <div class="calaresztaform">
-        <form method="post" action="">
+        <form id="changepassword">
+        @csrf
             <div>
                 <label class="labelcolor">Aktualne hasło:</Label>
-                <input type="password" class="inputcolor" id="accountsettingspasswordnow" required>
+                <input type="password" class="inputcolor" id="accountsettingspasswordnow errorshowicon" name="accountsettingspasswordnow">
             </div>
             <div>
                 <label class="labelcolor">Nowe hasło:</Label>
-                <input type="password" class="inputcolor" id="accountsettingspasswordnew" required>
+                <input type="password" class="inputcolor" id="accountsettingspasswordnew" name="accountsettingspasswordnew">
             </div>
             <div>
                 <label class="labelcolor">Powtórz nowe hasło:</Label>
-                <input type="password" class="inputcolor" id="accountsettingspasswordnewrepeat" required>
+                <input type="password" class="inputcolor" id="accountsettingspasswordnewrepeat" name="accountsettingspasswordnewrepeat">
             </div>
             <div class="d-flex justify-content-center" style="margin-top: 20px; margin-bottom: 5px;">
-                <input id="changepassword" type="submit" name="fjsafew" class="btn btn-primary">
-                {{-- <button id="changepassword" class="btn btn-primary">Zapisz</button> --}}
+                <input type="submit" name="fjsafew" class="btn btn-primary">
             </div>
         </form>
     </div>

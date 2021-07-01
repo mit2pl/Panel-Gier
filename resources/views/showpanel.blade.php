@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/059011e9b1.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 </head>
 <body class="body">
 @if(isset($languagewaschange))
